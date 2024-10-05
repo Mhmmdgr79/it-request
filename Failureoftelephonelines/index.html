@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="files/style.css">
+    <script src="https://kit.fontawesome.com/817ee32697.js" crossorigin="anonymous"></script>
+    <script language="javascript" type="text/javascript" src="asd.js"></script>
+    <title>اعلام خرابی خطوط تلفن</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./animations.css">
+    <link rel="icon" type="image/x-icon" href="../Pictures/favicon.png">
+    <script src="https://files.free-learn.ir/Tryitself/javascript/intro/files/sweetalert2.js"></script>
+   
+</head>
+<body onload="getName()">
+    <div class="left">
+        <img src="../Pictures/favicon.png" alt="">
+    </div>
+    <div class="right">
+        <div class="container">
+            <div class="row" style="direction: rtl;">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 ">
+                    <div class="rightdiv">
+                        <span class="fadeInRight animated">تغییر درخواست</span>
+                        <img class="fadeIn animated" src="./pictures/userprofile.png" alt="">
+                        <table>
+                            <tr>
+                                <th><label for="fffname">نام کاربری :</label></th>
+                                <td>
+                                    <input class="from_Input fadeInRight animated" type="text" id="fffname"
+                                        name="fffname" placeholder="نام" readonly>
+                                </td>
+                            </tr>
+
+                        </table>
+                        <table>
+                            <table>
+                                <tr>
+
+                                    <td>
+                                        <form>
+                                            <select class="form-control" name="changerquest" id="changerquest">
+                                                <option value="" disabled selected hidden>انتخاب...</option>
+                                                <option value="nodechanging">جابه‌جایی نود</option>
+                                                <option value="More">سایر موارد</option>
+    
+                                            </select>
+                                        </form>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div style="margin-top: 10px;">
+                                <button style="width: 45%;" type="button" class="btn btn-outline-success"
+                                    onclick="changepage()">ثبت</button>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12 leftdiv  ">
+                    <h3 style="text-align: center; font-weight: bold;">اعلام خرابی خطوط تلفن</h3>
+                    <div class="tab nav nav-tabs">
+                        <button class="tablinks nav-link " onclick="openCity(event, 'Analog')">آنالوگ</button>
+                        <button class="tablinks nav-link " onclick="openCity(event, 'Digital')">دیجیتال</button>
+                    </div>
+                    <div id="Analog" class="tabcontent">
+                        <table>
+                            <tr>
+                                <th><label for="linenumber">شماره خط خراب :</label></th>
+                                <td>
+                                    <form id="AnalogForm" class="form-group" autocomplete="off">
+                                        <input oninvalid="this.setCustomValidity('لطفا از اعداد و حروف انگلیسی استفاده نمایید ')"
+                                        oninput="setCustomValidity('')" class="form-control" type="tel" id="linenumber" name="linenumber"
+                                        pattern="[A-Za-z0-9]+"  required>
+                                    </form>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="maneger"> معاونت / مدیریت :</label></td>
+                                <td>
+                                    <select oninvalid="this.setCustomValidity('لطفا یک گزینه را انتخاب نمایید')"
+                                    oninput="setCustomValidity('')" class="form-control" name="maneger" id="maneger" form="AnalogForm" required>
+                                        <option value="" disabled selected hidden> انتخاب ...</option>
+                                        <option value="2">معاونت برنامه ریزی و سیتسمم ها</option>
+                                        <option value="3">معاونت تامین</option>
+                                        <option value="4">معاونت تولید</option>
+                                        <option value="5">معاونت فروش و خدمات مشتریان</option>
+                                        <option value="6">مدیریت قراردادها</option>
+                                        <option value="7">مدیریت پروژه‌ها</option>
+                                        <option value="8">R&D معاونت مهندسی و </option>
+                                        <option value="9">مدیریت پیگیری های ویژه</option>
+                                        <option value="10">مدیریت خدمات پشتیبانی</option>
+                                        <option value="11">مدیریت منابع انسانی</option>
+                                        <option value="12">مدیریت مالی</option>
+                                        <option value="13">HSE مدیریت </option>
+                                        <option value="14">مدیریت پروژه توربین بادی</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                        <div style="margin-top: 10px; width: 99%;" class="row bounceIn animated form-group discrip">
+                            <label for="description">شرح خرابی :</label>
+                            <textarea style="height: 70px;" type="text" id="description" class="form-control" 
+                                name="tozihat" form="AnalogForm"></textarea>
+
+                        </div>
+                        <div class="row" style="width: 95%; margin: auto; margin-top: 10px;">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <button type="submit" form="form11" class="btn btn-outline-success">ثبت</button>
+                            </div>
+                            <div style="direction: ltr;" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <button type="button" onclick="back()" class="btn btn-outline-secondary">< بازگشت</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="Digital" class="tabcontent">
+                        <table>
+                            <tr class="pulse animated">
+                                <form id="Digitalform" autocomplete="off"></form>
+                                <th><label for="nodenum">شماره نود :</label></td>
+                                <td><input oninvalid="this.setCustomValidity('لطفا از اعداد و حروف انگلیسی استفاده نمایید ')"
+                                    oninput="setCustomValidity('')"  class="form-control" type="text" id="nodenum" name="nodenum"
+                                        form="Digitalform" pattern="[A-Za-z0-9]+"   required>
+                                </td>
+                                <th><label for="maneger"> معاونت / مدیریت :</label></td>
+                                <td>
+                                    <select oninvalid="this.setCustomValidity('لطفا یک گزینه را انتخاب نمایید')"
+                                    oninput="setCustomValidity('')" class="form-control" name="maneger" id="maneger" form="Digitalform"
+                                        required>
+                                        <option value="" disabled selected hidden> انتخاب ...</option>
+                                        <option value="2">معاونت برنامه ریزی و سیتسمم ها</option>
+                                        <option value="3">معاونت تامین</option>
+                                        <option value="4">معاونت تولید</option>
+                                        <option value="5">معاونت فروش و خدمات مشتریان</option>
+                                        <option value="6">مدیریت قراردادها</option>
+                                        <option value="7">مدیریت پروژه‌ها</option>
+                                        <option value="8">R&D معاونت مهندسی و </option>
+                                        <option value="9">مدیریت پیگیری های ویژه</option>
+                                        <option value="10">مدیریت خدمات پشتیبانی</option>
+                                        <option value="11">مدیریت منابع انسانی</option>
+                                        <option value="12">مدیریت مالی</option>
+                                        <option value="13">HSE مدیریت </option>
+                                        <option value="14">مدیریت پروژه توربین بادی</option>
+                                    </select>
+
+                                </td>
+                            </tr>
+                            <tr class="pulse animated">
+                                <th><label for="telnumber"> شماره تماس :</label></td>
+                                <td><input oninvalid="this.setCustomValidity('لطفا فقط اعداد انگلیسی وارد نمایید ')"
+                                    oninput="setCustomValidity('')"  class="form-control" type="tel" id="telnumber" name="telname"
+                                        form="Digitalform" maxlength="11"  pattern="{0-9}+" required></td>
+                                <th><label for="nodeplace">محل استقرار نود :</label></td>
+                                <td><select oninvalid="this.setCustomValidity('لطفا یک گزینه را انتخاب نمایید')"
+                                    oninput="setCustomValidity('')" class="form-control" name="nodeplace" id="nodeplace" form="Digitalform"
+                                        required>
+                                        <option value="" disabled selected hidden> انتخاب ...</option>
+                                        <option value="2">ساختمان مدیریت</option>
+                                        <option value="3">ساختمان فنی و مهندسی</option>
+                                        <option value="4">ساختمان تکنولوژی تولید</option>
+                                        <option value="5">ساختمان اداری</option>
+                                        <option value="6">ساختمان اموزش</option>
+                                        <option value="7">انبار مرکزی</option>
+                                        <option value="8">کارگاه 13</option>
+                                        <option value="9">کارگاه لیزر</option>
+                                        <option value="10">گارگاه پانچ</option>
+                                        <option value="11"> 11کارگاه</option>
+                                        <option value="12">تاسسیات مرکزی</option>
+                                        <option value="13">کارگاه 15</option>
+                                        <option value="14">کارگاه شینه</option>
+                                        <option value="15">چاله‌ی ماشین کاری سنگین</option>
+                                        <option value="16">کارگاه ابزارسازی</option>
+                                        <option value="17">نگهداری و تعمیرات</option>
+                                        <option value="18">کارگاه 25 مگاوات</option>
+                                        <option value="19">کارگاه مس</option>
+                                        <option value="20">آزمایشگاه باس داگت</option>
+                                        <option value="21">کارگاه قالب گیری پره</option>
+                                        <option value="22">سالن کارشناسان پره</option>
+                                        <option value="23">کارگاه تریم و رنگ پره</option>
+                                        <option value="24">حراست</option>
+                                        <option value="25">پارکینگ</option>
+                                    </select></td>
+                            </tr>
+                        </table>
+                        <div style="margin-top: 10px; width: 99%;" class="row bounceIn animated form-group discrip">
+                            <label for="description">شرح خرابی :</label>
+                            <textarea style="height: 70px;" type="text" id="description" class="form-control" 
+                                name="tozihat" form="Digitalform"></textarea>
+
+                        </div>
+                        <div class="row" style="width: 95%; margin: auto; margin-top: 10px;">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <button type="submit" form="form11" class="btn btn-outline-success">ثبت</button>
+                            </div>
+                            <div style="direction: ltr;" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <button type="button" onclick="back()" class="btn btn-outline-secondary">< بازگشت</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>  
+</body>
+
+</html>

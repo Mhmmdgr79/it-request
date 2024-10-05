@@ -1,0 +1,94 @@
+@font-face {
+    font-family: webfont;
+    src: url(./Fonts/Vazir-Light.woff) format('woff');
+  }
+body{
+    background-color: rgba(239,249,249,1);
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    font-family: webfont;
+    
+}
+th{
+    width: 50%;
+}
+.left{
+position: absolute;
+z-index: 1;
+direction: ltr;
+}
+.left img{
+    width: 50vh;
+    height: 50vh;
+    opacity: 0.1;
+    z-index: -1;
+}
+.right{
+    position: relative;
+}
+.container{
+    margin-top: 100px;
+}
+/* right div*/
+.rightdiv{
+    box-shadow: 5px 5px 5px  rgba(0, 0, 0, 0.505);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url(./pictures/225.png);
+    border-radius: 9px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px;
+    font-weight: bold;
+}
+.rightdiv img{
+    width: 70%;
+}
+.rightdiv th{
+    font-weight: 50;
+}
+.rightdiv input{
+   font-weight: bolder;
+}
+.from_Input{
+    border: none;
+    outline: none;
+    background-color: rgba(255, 0, 0, 0);
+    text-align: center;
+    width: 100%;
+}
+
+/*right element*/
+/* left element*/
+.leftdiv{
+    z-index: 1;
+
+}
+/* left element*/
+@media screen and (max-width:570px) {
+    .col-xs-12{
+        width: 60%;
+        margin: auto;
+        padding: 12px;
+    }
+    .col-xs-12 th,td{
+        display: block;
+    }
+    .col-xs-12 tr{
+        display: block;
+    }
+    .col-xs-12 th{
+        width: 100%;
+        font-size: smaller;
+    }
+ 
+    .left{
+        visibility: hidden;
+    }
+    .right{
+        position: absolute;
+    }
+
+  }

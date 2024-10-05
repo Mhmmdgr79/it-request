@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
+    <link rel="stylesheet" href="files/style.css">
+    <script language="javascript" type="text/javascript" src="asd.js"></script>
+    <script src="https://kit.fontawesome.com/817ee32697.js" crossorigin="anonymous"></script>
+    <script src="https://files.free-learn.ir/Tryitself/javascript/intro/files/sweetalert2.js"></script>
+    <title>خدمات شبكه و تلفن VOIP ( جا به جایی نود - مشکلات تلفن های VOIP - قطعی شبکه ) </title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" type="image/x-icon" href="./Pictures/favicon.png">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 centeritem ">
+                <div>
+<img src="./Pictures/favicon.png" alt="" width="90%">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 centeritem">
+                <div style="direction: rtl; " class="form-group">
+                    <form class="formsec1 " method="post">
+                        <h3>لطفا فرم زیر را پر کنید</h3>
+                        <div class="form-floating">
+                            <input class="form-control" type="text" id="fname" name="fname" autocomplete="off" required>
+                            <label for="fname">نام کابری :</label>
+                        </div>
+                    
+                        <div class="form-check" style="margin-top: 10px; ">
+                            <input type="radio" class="form-check-input" id="1" name="typeofsupport" value="moving node">
+                            <label class="form-check-label" for="1">جابه جایی نود </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="2" name="typeofsupport" value="damaged telephone">
+                            <label class="form-check-label" for="2">خرابی خطوط تلفن</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="More" name="typeofsupport" value="more">
+                            <label class="form-check-label" for="3">سایر موارد</label>
+                        </div>
+                    
+                        <button style="margin-top: 25px;" type="button" class="btn btn-outline-success"
+                            onclick="radiocheck(),sendvalue()">ثبت</button>
+                    
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js" ></script>
+</body>
+
+</html>
+

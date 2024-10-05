@@ -1,0 +1,24 @@
+@font-face {
+    font-family: webfont;
+    src: url(./Fonts/Vazir-Light.woff) format('woff');
+  }
+body{
+    background-color: rgba(239,249,249,1);
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    font-family: webfont;
+    
+}
+.centeritem{
+    margin-top:150px;
+}
+.col-xs-12 img{
+width: 50%;
+justify-content: center;
+align-items: center;
+margin-left: 25%;
+}
+.form-control{
+    width:75% ;
+}
